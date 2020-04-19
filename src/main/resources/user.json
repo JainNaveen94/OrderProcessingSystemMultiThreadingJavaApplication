@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"name": "Naveen Jain",
+		"address": "Karol Bagh",
+		"mobile": "99999999"
+	},
+	{
+		"id": 2,
+		"name": "Vijay Kumar",
+		"address": "Gurgaon",
+		"mobile": "88888888"
+	},
+	{
+		"id": 3,
+		"name": "Nitin Kumar",
+		"address": "Gurugram",
+		"mobile": "77777777"
+	},
+	{
+		"id": 4,
+		"name": "Harshit Tailang",
+		"address": "Lakshmi Nagar",
+		"mobile": "66666666"
+	},
+	{
+		"id": 5,
+		"name": "Shubham Jain",
+		"address": "Shastri Nagar",
+		"mobile": "55555555"
+	},
+	{
+		"id": 6,
+		"name": "Prabhi",
+		"address": "Pitampura",
+		"mobile": "444444444"
+	}
+]

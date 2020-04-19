@@ -1,0 +1,51 @@
+[
+	{
+		"prodId" : 1,
+		"prodName": "ABC",
+		"prodDesc": "ABC ABC ABC ABC ABC ABC ABC",
+		"prodQuantity": 10,
+		"prodPricePerUnit": 200.23
+	},
+	{
+		"prodId" : 2,
+		"prodName": "DEF",
+		"prodDesc": "DEF DEF DEF DEF DEF DEF DEF",
+		"prodQuantity": 3,
+		"prodPricePerUnit": 300.00
+	},
+	{
+		"prodId" : 3,
+		"prodName": "GHI",
+		"prodDesc": "GHI GHI GHI GHI GHI GHI GHI",
+		"prodQuantity": 5,
+		"prodPricePerUnit": 80.90
+	},
+	{
+		"prodId" : 4,
+		"prodName": "JKL",
+		"prodDesc": "JKL JKL JKL JKL JKL JKL JKL",
+		"prodQuantity": 7,
+		"prodPricePerUnit": 2100
+	},
+	{
+		"prodId" : 5,
+		"prodName": "MNO",
+		"prodDesc": "MNO MNO MNO MNO MNO MNO MNO",
+		"prodQuantity": 1,
+		"prodPricePerUnit": 208.23
+	},
+	{
+		"prodId" : 6,
+		"prodName": "PQR",
+		"prodDesc": "PQR PQR PQR PQR PQR PQR PQR",
+		"prodQuantity": 10,
+		"prodPricePerUnit": 900.50
+	},
+	{
+		"prodId" : 7,
+		"prodName": "XYZ",
+		"prodDesc": "XYZ XYZ XYZ XYZ XYZ XYZ XYZ",
+		"prodQuantity": 1,
+		"prodPricePerUnit": 1200.00
+	}
+]
