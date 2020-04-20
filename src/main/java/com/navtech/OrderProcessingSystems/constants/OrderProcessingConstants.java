@@ -22,5 +22,8 @@ public class OrderProcessingConstants {
 
 	// Order Process Related Constants
 	public static final String SUCCESS_ORDER = "Order is Placed Successfully";
+	
+	// Server Issue
+	public static final String SERVER_ISSUE = "Order Processing Failed due to some Server Issue";
 
 }

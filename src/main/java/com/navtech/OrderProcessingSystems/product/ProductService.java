@@ -35,11 +35,11 @@ public class ProductService {
 
 	// Update the Product Quantity
 	public synchronized boolean updateProductsQuantityAndAvailability(List<Product> products) {
-		
+
 		// Feteching the HashMap of Products
 		ConcurrentHashMap<Integer, Product> dbProducts = productDAO.getProducts();
-		
-		//  Creating Instance of Product
+
+		// Creating Instance of Product
 		Product dbProduct;
 		for (Product product : products) {
 			// Get the Specific Product
