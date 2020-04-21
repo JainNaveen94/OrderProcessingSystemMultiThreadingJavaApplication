@@ -23,8 +23,15 @@
 	{
 		"orderId": 2,
 		"userId": 1,
-		"totalAmount": 12761.8,
+		"totalAmount": 13162.26,
 		"productList": [
+			{
+				"prodId" : 1,
+				"prodName": "ABC",
+				"prodDesc": "ABC ABC ABC ABC ABC ABC ABC",
+				"prodQuantity": 2,
+				"prodPricePerUnit": 200.23
+			},
 			{
 				"prodId" : 3,
 				"prodName": "GHI",

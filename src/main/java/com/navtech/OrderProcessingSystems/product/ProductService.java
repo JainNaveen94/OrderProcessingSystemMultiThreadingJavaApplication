@@ -44,8 +44,16 @@ public class ProductService {
 		for (Product product : products) {
 			// Get the Specific Product
 			dbProduct = dbProducts.get(product.getProdId());
+
+			// System.out.println( Thread.currentThread() + " : " +
+			// dbProduct.getProdQuantity());
+
 			// Update the Product Quantity
 			dbProduct.setProdQuantity(dbProduct.getProdQuantity() - product.getProdQuantity());
+
+			// System.out.println( Thread.currentThread() + " : " +
+			// dbProduct.getProdQuantity());
+
 			// Updation Done here
 			dbProducts.put(product.getProdId(), dbProduct);
 		}
