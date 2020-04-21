@@ -1,10 +1,7 @@
 package com.navtech.OrderProcessingSystems.processorder;
 
-//import java.util.concurrent.ArrayBlockingQueue;
-//import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ThreadPoolExecutor;
-//import java.util.concurrent.TimeUnit;
 
 import com.navtech.OrderProcessingSystems.constants.OrderProcessingConstants;
 import com.navtech.OrderProcessingSystems.exception.custom.PaymentFailedException;
@@ -33,7 +30,7 @@ public class OrderService {
 				sleep(500);
 				return orderService.fetchOrder(orderId);
 			}, executor).exceptionally((ex) -> {
-				System.out.println(Thread.currentThread() + " : " + ex.getMessage());
+				System.out.println(Thread.currentThread() + " : Order Having OrderId " + orderId + " => " + ex.getMessage());
 				return null;
 			}).thenApply(order -> {
 				if (order != null) {
@@ -42,7 +39,7 @@ public class OrderService {
 				}
 				return order;
 			}).exceptionally((ex) -> {
-				System.out.println(Thread.currentThread() + " : " + ex.getMessage());
+				System.out.println(Thread.currentThread() + " : Order Having OrderId " + orderId + " => " + ex.getMessage());
 				return null;
 			}).thenApply(order -> {
 				if (order != null) {
@@ -52,7 +49,7 @@ public class OrderService {
 				}
 				return order;
 			}).exceptionally((ex) -> {
-				System.out.println(Thread.currentThread() + " : " + ex.getMessage());
+				System.out.println(Thread.currentThread() + " : Order Having OrderId " + orderId + " => " + ex.getMessage());
 				return null;
 			}).thenAccept(order -> {
 				if (order != null) {
@@ -65,7 +62,7 @@ public class OrderService {
 					}
 				}
 			}).exceptionally((ex) -> {
-				System.out.println(Thread.currentThread() + " : " + ex.getMessage());
+				System.out.println(Thread.currentThread() + " : Order Having OrderId " + orderId + " => " + ex.getMessage());
 				return null;
 			});
 		}
@@ -85,10 +82,10 @@ public class OrderService {
 	// Finilize the Order if All the Validation is passesd
 	public void finilizeOrder(UserOrder order, UserPayment payment) {
 		if (paymentService.updatePaymentBalance(order.getUserId(), (payment.getAmount() - order.getTotalAmount()))
-				|| productService.updateProductsQuantityAndAvailability(order.getProductList())) {
-			System.out.println(Thread.currentThread() + " : " + OrderProcessingConstants.SUCCESS_ORDER);
+				&& productService.updateProductsQuantityAndAvailability(order.getProductList())) {
+			System.out.println(Thread.currentThread() + " : Order Having OrderId " + order.getOrderId() + " => " + OrderProcessingConstants.SUCCESS_ORDER);
 		} else {
-			System.out.println(Thread.currentThread() + " : " + OrderProcessingConstants.SERVER_ISSUE);
+			System.out.println(Thread.currentThread() + " : Order Having OrderId " + order.getOrderId() + " => " + OrderProcessingConstants.SERVER_ISSUE);
 		}
 	}
 
